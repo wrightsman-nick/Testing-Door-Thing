@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DoorRaycast : MonoBehaviour
 {
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
-    [SerializeField] private string excludeLayerNamer = null;
+    [SerializeField] private string excludeLayerName = null;
 
     private MyDoorController raycastedObj;
 
-    [SerializeField] private KeyCode openDoorKey = KeryCode.Mouse0;
+    [SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
 
     [SerializeField] private Image crosshair = null;
     private bool isCrosshairActive;
@@ -21,11 +22,11 @@ public class NewBehaviourScript : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-        Vector3.fwd = transform.TransformDirection(Vector3.forward);
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-        int mask = 1 << layerMaskInteract.NameToLayer(excludeLayerName) | layerMaskInteract.value;
+        int mask = 1 << LayerMask.NameToLayer(excludeLayerName) | layerMaskInteract.value;
 
-        if(Physics.Raycast(transform.position, fws, out hit, rayLength, mask))
+        if(Physics.Raycast(transform.position, fwd, out hit, rayLength, mask))
         {
             if(hit.collider.CompareTag(interactableTag))
             {
