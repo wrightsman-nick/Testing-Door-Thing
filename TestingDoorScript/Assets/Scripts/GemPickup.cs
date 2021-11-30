@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GemPickup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject gemObject;
+    public GameObject player;
+    public Player playerHealth;
+
+
+    bool m_isPlayerAtGem;
+
+
+    void OnTriggerEnter (Collider other)
     {
-        
+        if (other.gameObject == player)
+        {
+            m_isPlayerAtGem = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update ()
     {
-        
+        if (m_isPlayerAtGem)
+        {
+            playerHealth.TakeDamage(10);
+            gemObject.SetActive(false);
+        }
     }
 }
