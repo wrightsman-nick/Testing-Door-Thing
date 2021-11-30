@@ -265,12 +265,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "BASIC CONTROLS:\nUse WASD to move your character. The crosshair in the
-    center of the screen will turn red when you can interact with certain objects
-    such as doors. \n\nSOUL FRAGMENTS:\nCollect Soul Fragments by colliding with
-    them. Be careful, as collecting Soul Fragments will deplete your energy. However,
-    you must sacrifice your past self in order to achieve the full effects of your
-    transcendence into another existence."
+  m_Text: 'BASIC MOVEMENT:
+
+    Use WASD to move your character. The crosshair in
+    the center of the screen will turn red when you can interact with certain objects
+    such as doors. When the crosshair turns red, left click on the object.
+
+
+    SOUL
+    FRAGMENTS:
+
+    Collect Soul Fragments by colliding with them. Be careful, as
+    collecting Soul Fragments will deplete your energy. However, you must sacrifice
+    your past self in order to achieve the full effects of your transcendence into
+    another existence.'
 --- !u!222 &157239138
 CanvasRenderer:
   m_ObjectHideFlags: 0
