@@ -27,7 +27,7 @@ public class GemPickup : MonoBehaviour
     {
         if (m_isPlayerAtGem)
         {
-            playerHealth.TakeDamage(10);
+            playerHealth.TakeDamage(5);
             fragmentCount.FragmentPickup();
 
             gemObject.SetActive(false);
