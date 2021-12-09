@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241267463746980526, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Name
-      value: First Person Controller Minimal
+      value: First Person Controller Minimal Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5253712882846181220, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Enabled
@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5272657471857185710, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: isGrounded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
