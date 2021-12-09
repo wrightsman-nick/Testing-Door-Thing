@@ -12,6 +12,7 @@ TagManager:
   - UnlockedTag
   - ExitTag
   - FragmentTag
+  - FinalTag
   layers:
   - Default
   - TransparentFX
