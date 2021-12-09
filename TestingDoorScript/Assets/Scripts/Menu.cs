@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour
 
     void TaskOnClick()
     {
-        SceneManager.LoadScene (1);
+        SceneManager.LoadScene (3);
     }
 
     void QuitTask()
