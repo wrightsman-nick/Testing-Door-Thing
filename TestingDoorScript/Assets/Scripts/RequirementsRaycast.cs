@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RequirementsRaycast : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class RequirementsRaycast : MonoBehaviour
     [SerializeField] private string excludeLayerName = null;
 
     [SerializeField] private Image crosshair = null;
+
+    [SerializeField] private KeyCode enterKey = KeyCode.Mouse0;
 
     public GameObject lockedText;
     public GameObject lockedText1;
@@ -68,7 +71,12 @@ public class RequirementsRaycast : MonoBehaviour
             if(hit.collider.CompareTag(unlockedTag))
             {
                 unlockedText.SetActive(true);
+                if (Input.GetKeyDown(enterKey))
+                {
+                   SceneManager.LoadScene(6);     
+                }
             }
+            
         }
 
         else
