@@ -19,6 +19,7 @@ public class RequirementsRaycast : MonoBehaviour
     public GameObject lockedText2;
     public GameObject lockedText3;
     public GameObject unlockedText;
+    public GameObject fragmentText;
 
 
     private const string requirementTag = "RequirementTag";
@@ -26,6 +27,7 @@ public class RequirementsRaycast : MonoBehaviour
     private const string requirementTag2 = "RequirementTag2";
     private const string requirementTag3 = "RequirementTag3";
     private const string unlockedTag = "UnlockedTag";
+    private const string fragmentTag = "FragmentTag";
 
     private void Update()
     {
@@ -76,7 +78,14 @@ public class RequirementsRaycast : MonoBehaviour
                    SceneManager.LoadScene(6);     
                 }
             }
-            
+        }
+
+         if(Physics.Raycast(transform.position, fwd, out hit, rayLength, mask))
+        {
+            if(hit.collider.CompareTag(fragmentTag))
+            {
+                fragmentText.SetActive(true);
+            }
         }
 
         else
@@ -86,6 +95,7 @@ public class RequirementsRaycast : MonoBehaviour
             lockedText2.SetActive(false);
             lockedText3.SetActive(false);
             unlockedText.SetActive(false);
+            fragmentText.SetActive(false);
         }
 
 
