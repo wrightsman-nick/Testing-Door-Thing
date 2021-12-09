@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Player : MonoBehaviour
@@ -16,7 +17,6 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
-    // Start is called before the first frame update
     void Start()
     {
         fragments = 0;
@@ -25,10 +25,12 @@ public class Player : MonoBehaviour
         SetCountText();
     }
 
-    // Update is called once per frame
     void Update()
     {
-    
+        if(fragments == 10)
+        {
+            SceneManager.LoadScene(4);
+        }
     }
 
     public void TakeDamage(int damage)

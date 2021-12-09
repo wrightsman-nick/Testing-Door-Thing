@@ -10,6 +10,7 @@ TagManager:
   - RequirementTag2
   - RequirementTag3
   - UnlockedTag
+  - ExitTag
   layers:
   - Default
   - TransparentFX

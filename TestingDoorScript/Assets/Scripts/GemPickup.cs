@@ -23,7 +23,7 @@ public class GemPickup : MonoBehaviour
         }
     }
 
-    void Update ()
+    void Update()
     {
         if (m_isPlayerAtGem)
         {
