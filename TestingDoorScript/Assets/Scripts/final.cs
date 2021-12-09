@@ -32,7 +32,7 @@ public class final : MonoBehaviour
                 finalText.SetActive(true);
                 if (Input.GetKeyDown(enterKey))
                 {
-                   SceneManager.LoadScene(0);     
+                   SceneManager.LoadScene(8);     
                 }
             }
         } 
